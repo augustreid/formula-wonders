@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './SCSS/App.scss';
+
+import '../SCSS/App.scss';
 import Home from "./Home"
 import RaceResults from "./RaceResults";
 import Schedule from "./Schedule"
