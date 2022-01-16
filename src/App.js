@@ -1,15 +1,15 @@
 import { Fragment } from "react";
-import '../SCSS/App.scss';
-import Home from "./Home"
-import RaceResults from "./RaceResults";
-import Schedule from "./Schedule"
-import Drivers from "./Drivers"
+import './SCSS/App.scss';
+import Home from "./components/Home"
+import RaceResults from "./components/RaceResults";
+import Schedule from "./components/Schedule"
+import Drivers from "./components/Drivers"
 import { Routes, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
     <>
-    <header className="header">Formula Wonders</header>
+    <h1 className="header">Formula Wonders</h1>
     <main>
       <Routes>
         <Route path="/" element={<Home />} /> 
