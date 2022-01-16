@@ -1,14 +1,40 @@
-import React from "react";
+import React, { Component, Fragment, useEffect } from "react";
 import "../SCSS/Schedule.scss";
 import useFetch from "../hooks/useFetch";
 import Race from "./Race"; 
+import Loading from "./Loading";
+
+
+// class Schedule extends Component {
+//     constructor() {
+//         super();
+//         this.state = {
+//             races: []
+//         }
+//     }
+
+//     componentDidMount() {
+//         fetch("http://ergast.com/api/f1/2022.json")
+//         .then(response => response.json()) 
+//         .then(data => console.log(data))
+//     }
+
+//     render() {
+//         return (
+//             <p>Testing</p>
+//         )
+//     }
+// }
 
 
 const Schedule = () => {
     const {data, isLoading, error} = useFetch("http://ergast.com/api/f1/2022.json");
-    const season = data.Racetable.Races;
+    const season = data.MRData.RaceTable.Races;
+
     let races;
+
     if (!isLoading) {
+        console.log(data)
         races = season.map((race) => {
             return (
                 <li key={race.round}>
