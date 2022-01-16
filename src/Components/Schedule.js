@@ -3,7 +3,9 @@ import "../SCSS/Schedule.scss";
 
 
 const Schedule = () => {
-
+    return (
+        <h3>Schedule</h3>
+    )
 }
 
 
