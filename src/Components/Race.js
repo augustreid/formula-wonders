@@ -1,9 +1,9 @@
 import React from "react";
 
 
-const Race = () => {
+const Race = ({ round, name, circuit, date, time }) => {
     return (
-        
+        <p>test</p>
     )
 }
 
