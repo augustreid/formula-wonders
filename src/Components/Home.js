@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import helmet from "../assets/helmet.svg";
 import calendar from "../assets/calendar.svg";
 import flag from "../assets/flag.svg";
+import useFetch from "../hooks/useFetch";
 import "../SCSS/Home.scss";
 
 
 const Home = () => {
+
   return (
     <section>
         <Link to={"/schedule"}>
