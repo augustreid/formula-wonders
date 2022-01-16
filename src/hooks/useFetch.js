@@ -15,7 +15,7 @@ const useFetch = (url) => {
       )
       .then(data => {
         console.log(data, "test")
-        setData(data);
+        setData(data.MRData);
         setIsLoading(false);
         console.log("state", data);
       })
@@ -23,7 +23,7 @@ const useFetch = (url) => {
         setError(error.message);
         setIsLoading(false);
       })
-  }, [isLoading, url])
+  }, [url])
 
   return {data, isLoading, error};
 }
