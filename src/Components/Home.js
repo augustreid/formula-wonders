@@ -6,17 +6,15 @@ import "../SCSS/Home.scss";
 const Home = () => {
   return (
     <section>
-        {/* <Link to={"/schedule"}>
-            <img src="../assets/calendar.png" alt="Icon of a calendar"/>
+        <Link to={"/schedule"}>
             <h2>Schedule</h2>
-        </Link> */}
+        </Link>
         <Link to={"/race-results"}>
-            <img src="../assets/flag.svg" alt="Icon of a checkered flag"/>
             <h2>Race Results</h2>
         </Link>
-        <Link>
-            <img src="../assets/helmet.svg" alt="Icon of racing helment"/>
-        </Link>
+        <Link to={"/drivers"}>
+            <h2>Drivers</h2>
+        </Link>   
     </section>
   )
 }
