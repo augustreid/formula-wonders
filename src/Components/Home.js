@@ -8,8 +8,6 @@ import "../SCSS/Home.scss";
 
 
 const Home = () => {
-  const {data, isLoading, error} = useFetch("https://ergast.com/api/f1/2008/qualifying/1.json")
-  console.log("home", data)
 
   return (
     <section>
