@@ -14,7 +14,7 @@ const useFetch = (url) => {
         return response.json();
       })
       .then(data => {
-        setData(data);
+        setData(data.MRData);
         setIsLoading(false);
       })
       .catch(error => {
