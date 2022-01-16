@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const useFetch = (url) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -11,17 +11,19 @@ const useFetch = (url) => {
         if (!response.ok) {
           throw new Error("Sorry, something went wrong! Please try again.");
         }
-        return response.json();
-      })
+        return response.json()}
+      )
       .then(data => {
+        console.log(data, "test")
         setData(data);
         setIsLoading(false);
+        console.log("state", data);
       })
       .catch(error => {
         setError(error.message);
         setIsLoading(false);
       })
-  }, [url])
+  }, [isLoading, url])
 
   return {data, isLoading, error};
 }

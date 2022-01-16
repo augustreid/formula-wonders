@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import helmet from "../assets/helmet.svg";
 import calendar from "../assets/calendar.svg";
 import flag from "../assets/flag.svg";
+import useFetch from "../hooks/useFetch";
 import "../SCSS/Home.scss";
 
 
 const Home = () => {
+  const {data, isLoading, error} = useFetch("https://ergast.com/api/f1/2008/qualifying/1.json")
+  console.log("home", data)
+
   return (
     <section>
         <Link to={"/schedule"}>
