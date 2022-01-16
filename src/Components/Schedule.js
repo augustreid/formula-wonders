@@ -9,19 +9,24 @@ import Loading from "./Loading";
 //     constructor() {
 //         super();
 //         this.state = {
-//             races: []
+//             races: [],
+//             loading: true
 //         }
 //     }
 
 //     componentDidMount() {
-//         fetch("http://ergast.com/api/f1/2022.json")
+//         fetch("http://ergast.com/api/f1/2022.JSON")
 //         .then(response => response.json()) 
+//         .then(data => this.setState({ races: data.MRData.RaceTable.Races, loading: false }))
 //         .then(data => console.log(data))
 //     }
 
 //     render() {
 //         return (
-//             <p>Testing</p>
+//             <div>
+//                 {this.state.loading ? <Loading />:
+//                 <p>{this.races}</p>}
+//             </div>
 //         )
 //     }
 // }
@@ -29,13 +34,12 @@ import Loading from "./Loading";
 
 const Schedule = () => {
     const {data, isLoading, error} = useFetch("http://ergast.com/api/f1/2022.json");
-    const season = data.MRData.RaceTable.Races;
-
-    let races;
-
-    if (!isLoading) {
-        console.log(data)
-        races = season.map((race) => {
+    // let races;
+    // console.log(data.MRData.RaceTable.Races);
+    const allRaces = (data.MRData.RaceTable.Races);
+    console.log("all races", allRaces);
+    // if (!isLoading) {
+       const races = allRaces.map((race) => {
             return (
                 <li key={race.round}>
                 <Race
@@ -48,20 +52,14 @@ const Schedule = () => {
                 </li>
             )
         })
-    }
+    // }
+    
 
     return (
         <section className="schedule">
-            <h3>{`${data.RaceTable.season} Season`}</h3>
-            {isLoading ? <Loading /> :
-            <>
-                {error ? <>{error}</> :
                 <ol className="race-container">
                     {races}
                 </ol>
-          }
-        </>
-      }
         </section>
     )
 }

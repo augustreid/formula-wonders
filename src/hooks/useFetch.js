@@ -7,25 +7,23 @@ const useFetch = (url) => {
 
   useEffect(() => {
     fetch(url)
-      .then(response => 
-        // if (!response.ok) {
-        //   throw new Error("Sorry, something went wrong! Please try again.");
-        // }
-        response.json()
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Sorry, something went wrong! Please try again.");
+        }
+        return response.json()}
       )
-      .then(res => {
-        console.log(res, "test")
-        if(res.MRData) {
-        setData(res.MRData);
+      .then(data => {
+        console.log(data, "test")
+        setData(data);
         setIsLoading(false);
         console.log("state", data);
-        }
       })
       .catch(error => {
         setError(error.message);
         setIsLoading(false);
       })
-  }, [isLoading])
+  }, [isLoading, url])
 
   return {data, isLoading, error};
 }
