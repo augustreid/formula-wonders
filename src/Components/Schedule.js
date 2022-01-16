@@ -6,12 +6,19 @@ import Race from "./Race";
 
 const Schedule = () => {
     const {data, isLoading, error} = useFetch("http://ergast.com/api/f1/2022.json");
-    const season = data?.Races;
+    const season = data.Racetable.Races;
 
     const races = season.map((race) => {
         return (
             <li>
+               <Race
+               round={race.round}
+               name={race.raceName}
+               circuit={race.Circuit}
+               date={race.date}
+               time={race.time}
 
+               /> 
             </li>
         )
     })
