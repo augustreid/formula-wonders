@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Outlet } from "react-router-dom";
 import "../SCSS/Drivers.scss"
 import DriverSelect from "./DriverSelect";
 import useFetch from "../hooks/useFetch";
@@ -20,13 +21,17 @@ const Drivers = () => {
     }
 
     return (
+        <section>
         <form>
             <select name="selectSeason" value={raceSeason} onChange={(e) => setRaceSeason(e.target.value)}>
                 <option>--Please Select a Year--</option>
                 {seasons}
             </select>
-            <DriverSelect year={raceSeason}/>
         </form>
+            <DriverSelect year={raceSeason}/>
+            <Outlet />
+        </section>
+        
     )
 }
 
