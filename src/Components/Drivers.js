@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../SCSS/Drivers.scss"
+import DriverSelect from "./DriverSelect";
 import useFetch from "../hooks/useFetch";
 
 const Drivers = () => {
@@ -24,6 +25,7 @@ const Drivers = () => {
                 <option>--Please Select a Year--</option>
                 {seasons}
             </select>
+            <DriverSelect year={raceSeason}/>
         </form>
     )
 }
