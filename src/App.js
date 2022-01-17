@@ -9,7 +9,10 @@ import { Routes, Route } from "react-router-dom";
 const App = () => {
   return (
     <>
-    <h1 className="header">Formula Wonders</h1>
+    <header className="header">
+      <h1>Formula</h1>
+      <h1>Wonders</h1>
+    </header>
     <main>
       <Routes>
         <Route path="/" element={<Home />} /> 
