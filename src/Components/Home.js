@@ -14,14 +14,14 @@ const Home = () => {
             <img src={calendar} alt="calendar icon" />
             <h2>Schedule</h2>
         </Link>
-        <Link to={"/race-results"}>
-            <img src={flag} alt="flag icon" />
-            <h2>Race Results</h2>
-        </Link>
         <Link to={"/drivers"}>
             <img src={helmet} alt="helmet icon" />
             <h2>Drivers</h2>
-        </Link>   
+        </Link>  
+        <Link to={"/race-results"}>
+            <img src={flag} alt="flag icon" />
+            <h2>Race Results</h2>
+        </Link>  
     </section>
   )
 }

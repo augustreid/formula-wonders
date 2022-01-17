@@ -4,14 +4,16 @@ import Home from "./components/Home"
 import RaceResults from "./components/RaceResults";
 import Schedule from "./components/Schedule"
 import Drivers from "./components/Drivers"
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 const App = () => {
   return (
     <div className="app">
-    <header className="header">
-      <h1>Formula</h1>
-      <h1>Wonders</h1>
+    <header>
+      <Link to={"/"} className="header">
+        <h1>Formula</h1>
+        <h1>Wonders</h1>
+      </Link>
     </header>
     <main>
       <Routes>
