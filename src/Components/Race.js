@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Race = ({ round, name, circuit, date, time }) => {
+const Race = ({ name, circuit, date, time }) => {
     const raceDate = new Date(date);
 
     return (

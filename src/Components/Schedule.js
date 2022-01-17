@@ -15,7 +15,6 @@ const Schedule = () => {
             return (
                 <li key={race.round}>
                 <Race
-                round={race.round}
                 name={race.raceName}
                 circuit={race.Circuit}
                 date={race.date}
