@@ -8,7 +8,7 @@ import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <>
+    <div className="app">
     <header className="header">
       <h1>Formula</h1>
       <h1>Wonders</h1>
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/drivers" element={<Drivers />} />
       </Routes>
     </main>
-   </>
+   </div>
   )
 }
 

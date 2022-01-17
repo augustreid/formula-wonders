@@ -1,5 +1,9 @@
 @use "mixVar" as v;
 
+.app {
+  background-color: v.$teal;
+}
+
 .header {
   @include v.flexbox(row, flex-start, center);
   font-family: v.$racing;
@@ -14,4 +18,12 @@ h1 {
 h1::first-letter {
   color: v.$red;
   font-size: larger;
+}
+
+a {
+  text-decoration: none;
+  color: v.$yellow;
+  font-size: 150%;
+  text-align: center;
+  font-family: v.$kite;
 }

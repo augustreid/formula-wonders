@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import helmet from "../assets/helmet.svg";
+import helmet from "../assets/helmet.png";
 import calendar from "../assets/calendar.svg";
-import flag from "../assets/flag.svg";
+import flag from "../assets/flag.png";
 import "../SCSS/Home.scss";
 
 
