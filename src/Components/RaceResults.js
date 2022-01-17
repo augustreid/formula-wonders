@@ -10,7 +10,6 @@ const RaceResults = () => {
     let results;
     
     if(!isLoading) {
-        // results = data.RaceTable.Races
         const raceResults = (data.RaceTable.Races[0].Results);
         results = raceResults.map((result) => {
             return (
