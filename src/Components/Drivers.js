@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../SCSS/Drivers.scss"
 import useFetch from "../hooks/useFetch";
 
 const Drivers = () => {
     const {data: allSeasons, isLoading, error} = useFetch("http://ergast.com/api/f1/seasons.json?limit=72")
+    const [raceSeason, setRaceSeason] = useState("")
     let seasons;
 
     if (!isLoading) {
@@ -19,7 +20,7 @@ const Drivers = () => {
 
     return (
         <form>
-            <select>
+            <select name="selectSeason" value={raceSeason} onChange={(e) => setRaceSeason(e.target.value)}>
                 <option>--Please Select a Year--</option>
                 {seasons}
             </select>
