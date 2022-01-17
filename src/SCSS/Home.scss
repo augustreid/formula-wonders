@@ -1,12 +1,22 @@
 @use "mixVar" as v;
 
 .home {
-    @include v.flexbox(row, space-around, flex-start);
+    @include v.flexbox(row, center, flex-start);
     height: 100vh;
     width: 100vw;
 }
 
 img {
-   width: 25vw;
-   height: 25vw;
+   width: 20vw;
+   height: 20vw;
+   margin: 10%;
 }
+
+a {
+    text-decoration: none;
+    color: v.$yellow;
+    font-size: 120%;
+    text-align: center;
+    font-family: v.$kite;
+    margin: 3%;
+  }

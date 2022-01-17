@@ -2,12 +2,14 @@
 
 .app {
   background-color: v.$teal;
+  height: 100%;
+  width: 100%;
 }
 
 .header {
   @include v.flexbox(row, flex-start, center);
   font-family: v.$racing;
-  font-size: 32pt;
+  font-size: 300%;
   color: v.$yellow;
 }
 
@@ -20,10 +22,3 @@ h1::first-letter {
   font-size: larger;
 }
 
-a {
-  text-decoration: none;
-  color: v.$yellow;
-  font-size: 150%;
-  text-align: center;
-  font-family: v.$kite;
-}
