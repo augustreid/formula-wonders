@@ -1,4 +1,5 @@
 import React from "react";
+import "../SCSS/Schedule.scss";
 
 
 const Race = ({ name, circuit, date, time }) => {
@@ -6,7 +7,7 @@ const Race = ({ name, circuit, date, time }) => {
 
     return (
         <div>
-            <h4>{name}</h4>
+            <h3>{name}</h3>
             <table>
                 <tbody>
                     <tr>

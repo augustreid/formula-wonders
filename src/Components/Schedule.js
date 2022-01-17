@@ -28,6 +28,7 @@ const Schedule = () => {
 
     return (
         <section className="schedule">
+            <h2>{`${data?.RaceTable?.season} World Championship Schedule`}</h2>
             {error && <p>{error}</p>}
             {isLoading ? <Loading /> :
                 <ol className="race-container">
