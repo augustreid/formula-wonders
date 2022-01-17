@@ -7,8 +7,6 @@ body {
 }
 
 .app {
-  // background-color: v.$teal;
-  // background-image: radial-gradient(#9FBBD1, v.$teal);
   height: 100%;
   width: 100%;
 }
@@ -18,6 +16,7 @@ body {
   font-family: v.$racing;
   font-size: 300%;
   color: v.$yellow;
+  text-shadow: 1px 1px black;
 }
 
 h1 {
