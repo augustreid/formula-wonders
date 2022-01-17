@@ -6,7 +6,9 @@
     font-family: v.$commissioner;
     
     h2 {
+        font-family: v.$prosto;
         color: v.$yellow;
+        text-shadow: 2px 2px black;
     }
 
     li {
@@ -29,6 +31,8 @@ td {
 }
 
 .race-container {
-    background-color: #497597;
+    background-color: #3C607C;
     padding: 3% 10%;
+    border: 6px groove v.$teal;
+    border-radius: 10px;
 }

@@ -1,7 +1,8 @@
 @use "mixVar" as v;
 
 .app {
-  background-color: v.$teal;
+  // background-color: v.$teal;
+  background-image: radial-gradient(#9FBBD1, v.$teal);
   height: 100%;
   width: 100%;
 }
