@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import Constructors from "./Constructors";
 import Wins from "./Wins";
+import Loading from "./Loading";
 
 const SingleDriver = () => {
     const driverId = useParams().id;
@@ -16,7 +17,7 @@ const SingleDriver = () => {
     return (
         <div>
         {error && <p>{error}</p>}
-       {!isLoading && 
+       {isLoading ? <Loading /> :
        <section>
             <h3>{`${driver.givenName} ${driver.familyName}`}
                 {driver.permanentNumber && <p>{`#${driver.permanentNumber}`}</p>}
