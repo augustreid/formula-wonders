@@ -131,12 +131,12 @@ describe("latest race results page", () => {
 
   it("Should display the results from the most recent race", () => {
     cy.get("h2")
-        .contains("Latest Race Results")
+        .should("contain", "Latest Race Results")
       .get("ol")
       .get("li")
-        .contains("Max Verstappen")
+        .should("contain", "Max Verstappen")
       .get("li")
-        .contains("Lewis Hamilton")
+        .should("contain", "Lewis Hamilton")
   })
 
   it("should be able to navigate back to the home page by clicking the header", () => {

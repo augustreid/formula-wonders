@@ -68,12 +68,12 @@ describe("current season schedule page", () => {
 
   it("Should display the schedule for the current F1 season", () => {
     cy.get("h2")
-        .contains("2022 World Championship Schedule")
+        .should("contain", "2022 World Championship Schedule")
       .get("ol")
       .get("li")
-        .contains("Bahrain Grand Prix")
+        .should("contain", "Bahrain Grand Prix")
       .get("li")
-        .contains("Saudi Arabian Grand Prix")
+        .should("contain", "Saudi Arabian Grand Prix")
   })
 
   it("should be able to navigate back to the home page by clicking the header", () => {
