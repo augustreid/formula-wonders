@@ -5,11 +5,8 @@ describe("Formula Wonders home page", () => {
     cy.visit('http://localhost:3000');
   });
 
-  it("should be able to visit the home page and render the correct elements", () => {
-    // cy.visit("http://localhost:3000/")
-  
+  it("should be able to visit the home page and render the correct elements", () => {  
     cy.get("a")
-      // .get("link")
       .get("h1")
         .contains("Formula")
       cy.get("h1")
@@ -25,7 +22,24 @@ describe("Formula Wonders home page", () => {
   })
 
   it("should be able to click on an icon to view the schedule page", () => {
-    cy.get()
+    cy.get("section")
+      .get("a")
+        .contains("Schedule")
+        .click()
+  })
+
+    it("should be able to click on an icon to view the drivers page", () => {
+    cy.get("section")
+      .get("a")
+        .contains("Drivers")
+        .click()
+  })
+
+    it("should be able to click on an icon to view the Race Results page", () => {
+    cy.get("section")
+      .get("a")
+        .contains("Race Results")
+        .click()
   })
 
 
