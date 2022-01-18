@@ -28,8 +28,8 @@ const Drivers = () => {
                 {seasons}
             </select>
         </form>
-            <DriverSelect year={raceSeason}/>
-            <Outlet />
+            {raceSeason && <DriverSelect year={raceSeason}/>}
+            {/* <Outlet /> */}
         </section>
         
     )

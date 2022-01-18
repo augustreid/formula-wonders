@@ -4,6 +4,7 @@ import Home from "./components/Home"
 import RaceResults from "./components/RaceResults";
 import Schedule from "./components/Schedule"
 import Drivers from "./components/Drivers"
+import SingleDriver from "./components/SingleDriver";
 import { Routes, Route, Link } from "react-router-dom";
 
 const App = () => {
