@@ -85,7 +85,36 @@ describe("driver info page", () => {
           .click()
   })
 
-  it("should be able to visit the specific driver's info based on the url", () => {
-    
+  it("should be able to display the specific driver's info based on the url", () => {
+      cy.visit("http://localhost:3000/drivers/bottas")
+        .get("h3")
+          .should("contain", "Valtteri Bottas")
+        .get("ul")
+          .should("contain", "Mercedes")
+        .get("button")
+        .should("contain", "Learn More")
+        .click()
   })
+
+   it("should be able to navigate back to the home page by clicking the header", () => {
+    cy.get("header")
+      .get("a")
+      .get("h1")
+      .contains("Formula")
+      .click()
+  })
+
+  it("should be able to click a link in side nav to visit race results page", () => {
+    cy.get("nav")
+        .get("a")
+          .contains("Race Results")
+          .click()
+  })
+
+  it("should be able to click a link in side nav to visit schedule page", () => {
+    cy.get("nav")
+       .get("a")
+          .contains("Schedule")
+          .click()
+  });
 })
