@@ -41,6 +41,4 @@ describe("Formula Wonders home page", () => {
         .contains("Race Results")
         .click()
   })
-
-
 })
