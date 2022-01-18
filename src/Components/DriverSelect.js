@@ -30,7 +30,7 @@ const DriverSelect = ({year}) => {
                 <button type="submit">Lookup Driver</button>
             </Link>}
             <Link to={"/drivers"}>
-                <button >Clear</button>
+                <button type="submit">Clear</button>
             </Link>
         </div>
     )
