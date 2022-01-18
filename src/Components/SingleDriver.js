@@ -15,8 +15,24 @@ const SingleDriver = () => {
         <div>
        {!isLoading && 
        <section>
-            <h3>{`${driver.givenName} ${driver.familyName}`}</h3>
-            
+            <h3>{`${driver.givenName} ${driver.familyName}`}
+                {driver.permanentNumber && <p>{`#${driver.permanentNumber}`}</p>}
+            </h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Nationality:</th>
+                        <td>{driver.nationality}</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth:</th>
+                        <td>{driver.dateOfBirth}</td>
+                    </tr>
+                </tbody>
+            </table>
+        <button>
+            <a href={driver.url} target="_blank" rel="noreferrer noopener">Learn More</a>
+        </button>
         </section>}
         </div>
     )
