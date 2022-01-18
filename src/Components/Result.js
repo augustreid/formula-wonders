@@ -1,11 +1,12 @@
 import React from "react";
+import "../SCSS/SideNav.scss"
 
 
 const Result = ({ driver, driverNumber, points, constructor, grid, time }) => {
     return (
         <div>
             <h4>{`${driver.givenName} ${driver.familyName} #${driverNumber}`}</h4>
-            <p>{constructor}</p>
+            <p className="constructor">{constructor}</p>
             <table>
                 <tbody>
                     <tr>

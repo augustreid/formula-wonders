@@ -2,8 +2,7 @@
 
 .side-nav {
     @include v.flexbox(row, flex-end, flex-end);
-    margin-top: 8%;
-    margin-right: 5%;
+    margin: 8% 8% 8% 5%;
 }
 
 .right-nav {

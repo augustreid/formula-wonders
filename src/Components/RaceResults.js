@@ -29,18 +29,18 @@ const RaceResults = () => {
     }
 
     return (
-        <>
-            <section>
-                <h3>Race Results</h3>
+        <div className="container">
+            <section className="results">
+                <h2>Latest Race Results</h2>
                 {error && <p>{error}</p>}
                 {isLoading ? <Loading /> :
-                    <ol>
+                    <ol className="result-container">
                         {results}
                     </ol> 
                 }
             </section>
             <SideNav />
-        </>
+        </div>
     )
 }
 
