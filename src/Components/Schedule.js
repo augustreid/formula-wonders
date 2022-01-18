@@ -3,7 +3,7 @@ import "../SCSS/Schedule.scss";
 import useFetch from "../hooks/useFetch";
 import Race from "./Race"; 
 import Loading from "./Loading";
-import TopNav from "./TopNav";
+import SideNav from "./SideNav";
 
 
 const Schedule = () => {
@@ -38,7 +38,7 @@ const Schedule = () => {
                     </ol>
                 }
             </section>
-            <TopNav />
+            <SideNav />
         </div>
     )
 }

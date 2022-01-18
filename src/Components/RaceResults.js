@@ -3,7 +3,7 @@ import "../SCSS/RaceResults.scss";
 import useFetch from "../hooks/useFetch";
 import Result from "./Result";
 import Loading from "./Loading";
-import TopNav from "./TopNav";
+import SideNav from "./SideNav";
 
 const RaceResults = () => {
     const {data, isLoading, error} = useFetch("http://ergast.com/api/f1/current/last/results.JSON")
@@ -30,7 +30,6 @@ const RaceResults = () => {
 
     return (
         <>
-        <TopNav />
             <section>
                 <h3>Race Results</h3>
                 {error && <p>{error}</p>}
@@ -40,6 +39,7 @@ const RaceResults = () => {
                     </ol> 
                 }
             </section>
+            <SideNav />
         </>
     )
 }

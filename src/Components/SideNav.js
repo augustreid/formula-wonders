@@ -1,13 +1,13 @@
 import React from "react";
-import "../SCSS/TopNav.scss";
+import "../SCSS/SideNav.scss";
 import { NavLink } from "react-router-dom";
 import helmet from "../assets/helmet.png";
 import calendar from "../assets/calendar.svg";
 import flag from "../assets/flag.png";
 
-const TopNav = () => {
+const SideNav = () => {
     return (
-        <div className="top-nav">
+        <div className="side-nav">
             <nav className="right-nav">
                 <NavLink to={"/schedule"}>
                     <img src={calendar} alt="calendar icon" />
@@ -28,4 +28,4 @@ const TopNav = () => {
 
 
 
-export default TopNav;
+export default SideNav;

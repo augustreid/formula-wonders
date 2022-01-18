@@ -4,7 +4,7 @@ import "../SCSS/Drivers.scss";
 import DriverSelect from "./DriverSelect";
 import useFetch from "../hooks/useFetch";
 import Loading from "./Loading";
-import TopNav from "./TopNav";
+import SideNav from "./SideNav";
 
 
 const Drivers = () => {
@@ -25,7 +25,6 @@ const Drivers = () => {
 
     return (
         <>
-            <TopNav />
             <section>
             {error && <p>{error}</p>}
             {isLoading && <Loading /> }
@@ -38,6 +37,7 @@ const Drivers = () => {
                 {raceSeason && <DriverSelect year={raceSeason}/>}
                 <Outlet />
             </section>
+            <SideNav />
         </>
     )
 }
