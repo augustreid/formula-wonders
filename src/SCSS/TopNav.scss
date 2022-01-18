@@ -1,0 +1,17 @@
+@use "mixVar" as v;
+
+.top-nav {
+    @include v.flexbox(row, flex-end, flex-end);
+    margin-top: 8%;
+    margin-right: 5%;
+}
+
+.right-nav {
+    @include v.flexbox(column, flex-end, flex-end);
+    font-size: 60%;
+
+    img {
+        width: 5vw;
+        height: 5vw;
+    }
+}

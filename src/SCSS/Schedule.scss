@@ -1,5 +1,9 @@
 @use "mixVar" as v;
 
+.container {
+    @include v.flexbox(row, center, flex-start);
+}
+
 .schedule {
     @include v.flexbox(column, flex-start, center);
     font-size: 150%;
