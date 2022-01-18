@@ -1,0 +1,19 @@
+$yellow: #FFD046;
+$red: #EE3124;
+$teal: #2b4557;
+$light: #E4ECF2;
+
+
+$commissioner: 'Commissioner', sans-serif;
+$faster: 'Faster One', cursive;
+$kite: 'Kite One', sans-serif;
+$prosto: 'Prosto One', cursive;
+$racing: 'Racing Sans One', cursive;
+
+@mixin flexbox($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+

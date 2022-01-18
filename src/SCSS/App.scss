@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+@use "mixVar" as v;
+
+body {
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(#9FBBD1, v.$teal);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  height: 100%;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  @include v.flexbox(row, flex-start, center);
+  font-family: v.$racing;
+  font-size: 300%;
+  color: v.$yellow;
+  text-shadow: 1px 1px black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+  margin-left: 3%;
 }
 
-.App-link {
-  color: #61dafb;
+h1::first-letter {
+  color: v.$red;
+  font-size: larger;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

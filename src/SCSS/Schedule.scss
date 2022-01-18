@@ -1,0 +1,38 @@
+@use "mixVar" as v;
+
+.schedule {
+    @include v.flexbox(column, flex-start, center);
+    font-size: 150%;
+    font-family: v.$commissioner;
+    
+    h2 {
+        font-family: v.$prosto;
+        color: v.$yellow;
+        text-shadow: 2px 2px black;
+    }
+
+    li {
+        color: black;
+    }
+}
+
+tr {
+    @include v.flexbox(row, space-between, center);
+    width: 30vw;
+}
+
+th {
+    color: v.$yellow;
+}
+
+td {
+    color: v.$light;
+    margin-left: 5%;
+}
+
+.race-container {
+    background-color: #3C607C;
+    padding: 3% 10%;
+    border: 6px groove v.$teal;
+    border-radius: 10px;
+}

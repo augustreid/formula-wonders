@@ -14,10 +14,8 @@ const useFetch = (url) => {
         return response.json()}
       )
       .then(data => {
-        console.log(data, "test")
         setData(data.MRData);
         setIsLoading(false);
-        console.log("state", data);
       })
       .catch(error => {
         setError(error.message);
