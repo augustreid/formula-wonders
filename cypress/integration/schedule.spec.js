@@ -1,9 +1,9 @@
 
 describe("current season schedule page", () => {
 
-    beforeEach(() => {
-    cy.intercept("http://ergast.com/api/f1/2022.json", {
-        "MRData": {
+  beforeEach(() => {
+   cy.intercept("http://ergast.com/api/f1/2022.json", {
+     "MRData": {
             "xmlns": "http://ergast.com/mrd/1.4",
             "series": "f1",
             "url": "http://ergast.com/api/f1/2022.json",
@@ -52,18 +52,49 @@ describe("current season schedule page", () => {
                     "time": "17:30:00Z"
                     }]
                 }
-            }
-        })
-        cy.visit("http://localhost:3000/schedule/")
+           }
+      })
+   cy.visit("http://localhost:3000/schedule/")
   });
 
   it("should visit the schedule page and render the correct elements", () => {
-      cy.get("a")
-            .contains("Formula")
-        .get("a")
-            .contains("Wonders")
+    cy.get("a")
+        .contains("Formula")
+      .get("a")
+         .contains("Wonders")
+      .get(".schedule")
+      .get("nav")
   })
 
+  it("Should display the schedule for the current F1 season", () => {
+    cy.get("h2")
+        .contains("2022 World Championship Schedule")
+      .get("ol")
+      .get("li")
+        .contains("Bahrain Grand Prix")
+      .get("li")
+        .contains("Saudi Arabian Grand Prix")
+  })
 
+  it("should be able to navigate back to the home page by clicking the header", () => {
+    cy.get("header")
+      .get("a")
+      .get("h1")
+      .contains("Formula")
+      .click()
+  })
 
+  it("should be able to click a link in side nav to visit drivers page", () => {
+    cy.get("nav")
+        .get("a")
+          .contains("Drivers")
+          .click()
+  })
+
+  it("should be able to click a link in side nav to visit race results page", () => {
+    cy.get("nav")
+       .get("a")
+          .contains("Race Results")
+          .click()
+  })
 })
