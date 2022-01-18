@@ -29,7 +29,9 @@ const DriverSelect = ({year}) => {
             {selectedDriver && <Link to={`/drivers/${selectedDriver}`} key={selectedDriver.driverId} >
                 <button type="submit">Lookup Driver</button>
             </Link>}
-            {selectedDriver && <Outlet />}
+            <Link to={"/drivers"}>
+                <button >Clear</button>
+            </Link>
         </div>
     )
 }

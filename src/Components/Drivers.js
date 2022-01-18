@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import "../SCSS/Drivers.scss"
 import DriverSelect from "./DriverSelect";
 import useFetch from "../hooks/useFetch";
@@ -29,7 +29,7 @@ const Drivers = () => {
             </select>
         </form>
             {raceSeason && <DriverSelect year={raceSeason}/>}
-            {/* <Outlet /> */}
+            <Outlet />
         </section>
         
     )
