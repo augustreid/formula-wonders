@@ -4,6 +4,7 @@ import "../SCSS/Drivers.scss";
 import DriverSelect from "./DriverSelect";
 import useFetch from "../hooks/useFetch";
 import Loading from "./Loading";
+import TopNav from "./TopNav";
 
 
 const Drivers = () => {
@@ -23,19 +24,21 @@ const Drivers = () => {
     }
 
     return (
-        <section>
-        {error && <p>{error}</p>}
-        {isLoading && <Loading /> }
-        <form>
-            <select name="selectSeason" value={raceSeason} onChange={(e) => setRaceSeason(e.target.value)}>
-                <option>--Please Select a Year--</option>
-                {seasons}
-            </select>
-        </form>
-            {raceSeason && <DriverSelect year={raceSeason}/>}
-            <Outlet />
-        </section>
-        
+        <>
+            <TopNav />
+            <section>
+            {error && <p>{error}</p>}
+            {isLoading && <Loading /> }
+            <form>
+                <select name="selectSeason" value={raceSeason} onChange={(e) => setRaceSeason(e.target.value)}>
+                    <option>--Please Select a Year--</option>
+                    {seasons}
+                </select>
+            </form>
+                {raceSeason && <DriverSelect year={raceSeason}/>}
+                <Outlet />
+            </section>
+        </>
     )
 }
 
