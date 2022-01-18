@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
+import Constructors from "./Constructors";
+import Wins from "./Wins";
 
 const SingleDriver = () => {
     const driverId = useParams().id;
@@ -13,6 +15,7 @@ const SingleDriver = () => {
 
     return (
         <div>
+        {error && <p>{error}</p>}
        {!isLoading && 
        <section>
             <h3>{`${driver.givenName} ${driver.familyName}`}
@@ -33,6 +36,8 @@ const SingleDriver = () => {
         <button>
             <a href={driver.url} target="_blank" rel="noreferrer noopener">Learn More</a>
         </button>
+        <Constructors driverId={driverId}/>
+        <Wins driverId={driverId}/>
         </section>}
         </div>
     )
