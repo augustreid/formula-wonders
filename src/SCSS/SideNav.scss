@@ -14,3 +14,11 @@
         height: 5vw;
     }
 }
+
+.active {
+    color: v.$light;
+}
+
+a:hover {
+    text-decoration: underline;
+}
