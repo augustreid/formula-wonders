@@ -1,0 +1,24 @@
+@use "mixVar" as v;
+
+.side-nav {
+    @include v.flexbox(row, flex-end, flex-end);
+    margin: 8% 8% 8% 5%;
+}
+
+.right-nav {
+    @include v.flexbox(column, flex-end, flex-end);
+    font-size: 60%;
+
+    img {
+        width: 5vw;
+        height: 5vw;
+    }
+}
+
+.active {
+    color: v.$light;
+}
+
+a:hover {
+    text-decoration: underline;
+}

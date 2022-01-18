@@ -1,0 +1,48 @@
+@use "mixVar" as v;
+
+.container {
+    @include v.flexbox(row, center, flex-start);
+}
+
+.results {
+    @include v.flexbox(column, flex-start, center);
+    font-size: 150%;
+    font-family: v.$commissioner;
+    
+    h2 {
+        font-family: v.$prosto;
+        color: v.$yellow;
+        text-shadow: 2px 2px black;
+    }
+
+    li {
+        color: black;
+    }
+}
+
+tr {
+    @include v.flexbox(row, space-between, center);
+    width: 30vw;
+}
+
+th {
+    color: v.$yellow;
+}
+
+td {
+    color: v.$light;
+    margin-left: 5%;
+}
+
+.result-container {
+    background-color: v.$medium;
+    padding: 3% 10%;
+    border: 6px groove v.$teal;
+    border-radius: 10px;
+}
+
+.constructor {
+    color: v.$light;
+    font-family: v.$kite;
+    font-weight: bold;
+}

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import "../SCSS/Drivers.scss";
 import DriverSelect from "./DriverSelect";
 import useFetch from "../hooks/useFetch";
 import Loading from "./Loading";
-import TopNav from "./TopNav";
+import SideNav from "./SideNav";
 
 
 const Drivers = () => {
-    const {data: allSeasons, isLoading, error} = useFetch("http://ergast.com/api/f1/seasons.json?limit=72")
+    const {data: allSeasons, isLoading, error} = useFetch("http://ergast.com/api/f1/seasons.json?limit=100")
     const [raceSeason, setRaceSeason] = useState("")
     let seasons;
 
@@ -25,7 +25,6 @@ const Drivers = () => {
 
     return (
         <>
-            <TopNav />
             <section>
             {error && <p>{error}</p>}
             {isLoading && <Loading /> }
@@ -38,6 +37,7 @@ const Drivers = () => {
                 {raceSeason && <DriverSelect year={raceSeason}/>}
                 <Outlet />
             </section>
+            <SideNav />
         </>
     )
 }

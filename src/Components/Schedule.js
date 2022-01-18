@@ -3,7 +3,7 @@ import "../SCSS/Schedule.scss";
 import useFetch from "../hooks/useFetch";
 import Race from "./Race"; 
 import Loading from "./Loading";
-import TopNav from "./TopNav";
+import SideNav from "./SideNav";
 
 
 const Schedule = () => {
@@ -28,8 +28,7 @@ const Schedule = () => {
     
 
     return (
-        <>
-        <TopNav />
+        <div className="container">
             <section className="schedule">
                 <h2>{`${data?.RaceTable?.season} World Championship Schedule`}</h2>
                 {error && <p>{error}</p>}
@@ -39,7 +38,8 @@ const Schedule = () => {
                     </ol>
                 }
             </section>
-        </>
+            <SideNav />
+        </div>
     )
 }
 
