@@ -34,11 +34,11 @@ const SingleDriver = () => {
                     </tr>
                 </tbody>
             </table>
-        <button>
-            <a href={driver.url} target="_blank" rel="noreferrer noopener">Learn More</a>
-        </button>
-        <Constructors driverId={driverId}/>
-        <Wins driverId={driverId}/>
+            <Constructors driverId={driverId}/>
+            <Wins driverId={driverId}/>
+            <button>
+                <a href={driver.url} target="_blank" rel="noreferrer noopener">Learn More</a>
+            </button>
         </section>}
         </div>
     )
