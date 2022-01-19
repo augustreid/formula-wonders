@@ -53,7 +53,7 @@ select {
   padding: 1%;
   background-color: v.$medium;
   color: v.$light;
-  border: 6px groove v.$teal;
+  border: 5px groove v.$teal;
   border-radius: 10px;
 }
 
@@ -64,9 +64,9 @@ select {
 }
 
 button {
-  font-size: 70%;
-  width: 14vw;
-  padding: 1%;
+  font-size: 60%;
+  width: 16vw;
+  padding: 2%;
   background-color: v.$light;
   font-weight: bold;
 }
@@ -90,6 +90,27 @@ button:hover {
   background-color: v.$yellow;
 }
 
+.wiki {
+  @include v.flexbox(row, flex-end, center);
+  width: 100%;
+  padding: 5%;
+} 
+
+.wiki-button {
+  font-weight: bold;
+  color: black;
+    button {
+        background-color: v.$medium;
+        border: 4px outset v.$teal;
+    }
+    button:hover {
+      background-color: v.$light;
+    }
+}
+
+
+
+
 @media screen and (max-width: 775px) {
   tr {
     @include v.flexbox(row, space-between, center);
@@ -103,11 +124,26 @@ button:hover {
   h2 {
     text-align: center;
   }
+
+  .driver-buttons {
+    @include v.flexbox(column, center, center);
+    width: 30vw;
+    margin: none;
+  }
+
+  button {
+    font-size: 60%;
+    width: 35vw;
+    padding: 2%;
+    background-color: v.$light;
+    font-weight: bold;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
   .drivers {
-    font-size: 120%
+    font-size: 105%
   }
 }
 
