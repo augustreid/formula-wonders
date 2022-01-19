@@ -1,4 +1,5 @@
-import React, { Component, Fragment, useEffect } from "react";
+import React from "react";
+import PropTypes from 'prop-types';
 import "../SCSS/Schedule.scss";
 import useFetch from "../hooks/useFetch";
 import Race from "./Race"; 
@@ -7,41 +8,48 @@ import SideNav from "./SideNav";
 
 
 const Schedule = () => {
-    const {data, isLoading, error} = useFetch("http://ergast.com/api/f1/2022.json");
-    let races;
- 
-    if (!isLoading) {
-        const allRaces = (data.RaceTable.Races);
-        races = allRaces.map((race) => {
-            return (
-                <li key={race.round}>
-                <Race
-                name={race.raceName}
-                circuit={race.Circuit}
-                date={race.date}
-                time={race.time}
-                /> 
-                </li>
-            )
-        })
-    }
-    
+  const {data, isLoading, error} = useFetch("http://ergast.com/api/f1/2022.json");
+  let races;
 
-    return (
-        <div className="container">
-            <section className="schedule">
-                <h2>{`${data?.RaceTable?.season} World Championship Schedule`}</h2>
-                {error && <p>{error}</p>}
-                {isLoading ? <Loading /> :
-                    <ol className="race-container">
-                        {races}
-                    </ol>
-                }
-            </section>
-            <SideNav />
-        </div>
-    )
-}
+  if (!isLoading) {
+    const allRaces = (data.RaceTable.Races);
+    races = allRaces.map((race) => {
+      return (
+        <li key={race.round}>
+          <Race
+            name={race.raceName}
+            circuit={race.Circuit}
+            date={race.date}
+            time={race.time}
+            /> 
+        </li>
+      )
+    })
+  }
 
 
-export default Schedule;
+  return (
+    <div className="container">
+      <section className="schedule">
+        <h2>{`${data?.RaceTable?.season} World Championship Schedule`}</h2>
+        {error && <p>{error}</p>}
+        {isLoading ? <Loading /> :
+          <ol className="race-container">
+            {races}
+          </ol>
+        }
+      </section>
+      <SideNav />
+    </div>
+  )
+  }
+
+
+  export default Schedule;
+
+Schedule.propTypes = {
+  name: PropTypes.string,
+  circuit: PropTypes.object,
+  date: PropTypes.string,
+  time: PropTypes.string
+  };
