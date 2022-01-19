@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
+import Loading from "./Loading";
 
 const DriverSelect = ({year}) => {
   const {data: seasonDrivers, isLoading, error} = useFetch(`https://ergast.com/api/f1/${year}/drivers.json`)
@@ -20,6 +21,9 @@ const DriverSelect = ({year}) => {
 
   return (
     <div className="driver-selection">
+      {isLoading && <Loading />}
+      {error ? <p>{error}</p> :
+      <>
       <form>
       <select className="driver-name" name="driverName" value={selectedDriver} onChange={(e) => {setSelectedDriver(e.target.value) }}>
         <option>--Please Select a Driver--</option>
@@ -32,6 +36,8 @@ const DriverSelect = ({year}) => {
       <Link to={"/drivers"}>
         <button type="submit" className="clear">Clear</button>
       </Link>
+      </>
+      }
     </div>
   )
 }

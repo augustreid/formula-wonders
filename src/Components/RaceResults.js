@@ -32,8 +32,8 @@ const RaceResults = () => {
     <div className="container">
       <section className="results">
         <h2>Latest Race Results</h2>
-        {error && <p>{error}</p>}
-        {isLoading ? <Loading /> :
+        {isLoading && <Loading />}
+        {!error ? <p>{error}</p> :
           <ol className="result-container">
             {results}
           </ol> 
