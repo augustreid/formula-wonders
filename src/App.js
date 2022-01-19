@@ -1,10 +1,11 @@
-import { Fragment } from "react";
+import React from "react";
 import './SCSS/App.scss';
-import Home from "./components/Home"
+import Home from "./components/Home";
 import RaceResults from "./components/RaceResults";
 import Schedule from "./components/Schedule"
 import Drivers from "./components/Drivers"
 import SingleDriver from "./components/SingleDriver";
+import NotFound from "./components/NotFound";
 import { Routes, Route, Link } from "react-router-dom";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
     </header>
     <main>
       <Routes>
+        <Route path='*' element={<NotFound />} />
         <Route path="/" element={<Home />} /> 
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/race-results" element={<RaceResults />} />
