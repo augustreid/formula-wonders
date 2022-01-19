@@ -25,21 +25,24 @@ const Drivers = () => {
   }
 
   return (
-    <>
-      <section>
+    <div className="container">
+      <SideNav />
+      <section className="drivers">
         {error && <p>{error}</p>}
         {isLoading && <Loading /> }
         <form>
+          <label>
+            Pick a Formula 1 Season
           <select name="selectSeason" value={raceSeason} onChange={(e) => setRaceSeason(e.target.value)}>
             <option>--Please Select a Year--</option>
             {seasons}
           </select>
+          </label>
        </form>
         {raceSeason && <DriverSelect year={raceSeason}/>}
         <Outlet />
       </section>
-      <SideNav />
-    </>
+    </div>
   )
 }
 

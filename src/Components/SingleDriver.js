@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import PropTypes from 'prop-types';
+import "../SCSS/Drivers.scss";
 import useFetch from "../hooks/useFetch";
 import Constructors from "./Constructors";
 import Wins from "./Wins";
@@ -16,7 +17,7 @@ const SingleDriver = () => {
   }   
   
   return (
-    <div>
+    <div className="driver-info">
     {error && <p>{error}</p>}
     {isLoading ? <Loading /> :
     <section>
@@ -37,9 +38,13 @@ const SingleDriver = () => {
       </table>
       <Constructors driverId={driverId}/>
       <Wins driverId={driverId}/>
-      <button>
-        <a href={driver.url} target="_blank" rel="noreferrer noopener">Learn More</a>
-      </button>
+      <div className="wiki">
+          <a href={driver.url} target="_blank" rel="noreferrer noopener" className="wiki-button">
+        <button>
+            Learn More
+        </button>
+          </a>
+      </div>
     </section>}
 
     </div>

@@ -30,6 +30,7 @@ const Schedule = () => {
 
   return (
     <div className="container">
+      <SideNav />
       <section className="schedule">
         <h2>{`${data?.RaceTable?.season} World Championship Schedule`}</h2>
         {error && <p>{error}</p>}
@@ -39,7 +40,7 @@ const Schedule = () => {
           </ol>
         }
       </section>
-      <SideNav />
+      {/* <SideNav /> */}
     </div>
   )
   }
