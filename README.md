@@ -1,5 +1,7 @@
 # Formula Wonders
 
+[View Deployed App]()
+
 ### Mod3 Showcase
 
 ## Table of Contents
@@ -38,7 +40,7 @@ The home page provides just three options: Schedule, Race Results, and Drivers.
 ## Illustrations
 ![Home Page](./src/assets/home.png)
 ![Current Season Schedule](./src/assets/schedule.png)
-![Most Recent Race Results](./src/assets/details.png)
+![Most Recent Race Results](./src/assets/results.png)
 ![Select a Year](./src/assets/drivers1.png)
 ![Choose a Driver](./src/assets/drivers2.png)
 ![Display Driver Details](./src/assets/lando.png)
