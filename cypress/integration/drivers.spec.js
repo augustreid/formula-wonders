@@ -27,6 +27,8 @@ describe("driver info page", () => {
     cy.visit("http://localhost:3000/drivers")
   })
 
+
+
   it("should visit the drivers page and render correct elements", () => {
       cy.get("a")
         .contains("Formula")

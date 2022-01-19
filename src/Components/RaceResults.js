@@ -32,8 +32,8 @@ const RaceResults = () => {
     <div className="container">
       <section className="results">
         <h2>Latest Race Results</h2>
-        {error && <p>{error}</p>}
-        {isLoading ? <Loading /> :
+        {isLoading && <Loading />}
+        {!error ? <p>{error}</p> :
           <ol className="result-container">
             {results}
           </ol> 
@@ -51,7 +51,6 @@ RaceResults.propTypes = {
   driver: PropTypes.object,
   driverNumber: PropTypes.string,
   points: PropTypes.string,
-  constructor: PropTypes.string,
   grid: PropTypes.string,
   time: PropTypes.string
 }
