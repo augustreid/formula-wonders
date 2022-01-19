@@ -46,3 +46,24 @@ td {
     font-family: v.$kite;
     font-weight: bold;
 }
+
+@media screen and (max-width: 775px) {
+    tr {
+        @include v.flexbox(row, space-between, center);
+        width: 75vw;
+    }
+
+    .container {
+        @include v.flexbox(column, flex-start, center);
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .results {
+        font-size: 120%
+    }
+}

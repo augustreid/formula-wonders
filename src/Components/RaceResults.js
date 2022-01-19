@@ -30,16 +30,16 @@ const RaceResults = () => {
 
   return (
     <div className="container">
+      <SideNav />
       <section className="results">
         <h2>Latest Race Results</h2>
         {isLoading && <Loading />}
-        {!error ? <p>{error}</p> :
+        {error ? <p>{error}</p> :
           <ol className="result-container">
             {results}
           </ol> 
         }
       </section>
-      <SideNav />
     </div>
   )
 }
