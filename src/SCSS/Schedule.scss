@@ -6,7 +6,7 @@
 
 .schedule {
     @include v.flexbox(column, flex-start, center);
-    font-size: 150%;
+    font-size: 125%;
     font-family: v.$commissioner;
     
     h2 {
@@ -22,7 +22,7 @@
 
 tr {
     @include v.flexbox(row, space-between, center);
-    width: 30vw;
+    width: 40vw;
 }
 
 th {
@@ -39,4 +39,25 @@ td {
     padding: 3% 10%;
     border: 6px groove v.$teal;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 775px) {
+    tr {
+        @include v.flexbox(row, space-between, center);
+        width: 75vw;
+    }
+
+    .container {
+        @include v.flexbox(column, flex-start, center);
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .schedule {
+        font-size: 90%
+    }
 }

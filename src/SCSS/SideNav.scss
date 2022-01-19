@@ -2,16 +2,16 @@
 
 .side-nav {
     @include v.flexbox(row, flex-end, flex-end);
-    margin: 8% 8% 8% 5%;
+    margin: 8% 8% 8% 0;
 }
 
 .right-nav {
     @include v.flexbox(column, flex-end, flex-end);
-    font-size: 60%;
+    font-size: 70%;
 
     img {
-        width: 5vw;
-        height: 5vw;
+        width: 8vw;
+        height: 8vw;
     }
 }
 
@@ -21,4 +21,17 @@
 
 a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 775px) {
+    .right-nav {
+        @include v.flexbox(row, space-evenly, flex-start);
+        width: 100vw;
+        font-size: 55%;
+
+        img {
+            width: 15vw;
+            height: 15vw;
+        }
+    }
 }
