@@ -13,8 +13,8 @@ const SingleDriver = () => {
 
   if (!isLoading) {
     driver = driverInfo.DriverTable.Drivers[0];
-  }    
-
+  }   
+  
   return (
     <div>
     {error && <p>{error}</p>}
@@ -41,6 +41,7 @@ const SingleDriver = () => {
         <a href={driver.url} target="_blank" rel="noreferrer noopener">Learn More</a>
       </button>
     </section>}
+
     </div>
   )
 }

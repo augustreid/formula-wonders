@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/race-results" element={<RaceResults />} />
         <Route path="/drivers" element={<Drivers />}>
-          <Route path=':id' element={<SingleDriver />} />
+          <Route path=":id" element={<SingleDriver />} />
         </Route>
       </Routes>
     </main>

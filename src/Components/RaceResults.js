@@ -51,7 +51,6 @@ RaceResults.propTypes = {
   driver: PropTypes.object,
   driverNumber: PropTypes.string,
   points: PropTypes.string,
-  constructor: PropTypes.string,
   grid: PropTypes.string,
   time: PropTypes.string
 }

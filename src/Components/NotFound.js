@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const NotFound = () => {
   return (
     <section>
-      <h1>404 Page Not Found</h1>
-      <h2>Uh oh, looks like you took a wrong turn!</h2>
+      <h2>404 Page Not Found</h2>
+      <h3>Uh oh, looks like you took a wrong turn!</h3>
       <Link to={"/"}>
         <h3>⬅ Back to the Pit Lane</h3>
       </Link>
