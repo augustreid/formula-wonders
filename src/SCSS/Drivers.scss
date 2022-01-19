@@ -1,0 +1,80 @@
+@use "mixVar" as v;
+
+.container {
+  @include v.flexbox(row, center, flex-start);
+}
+
+.drivers {
+  @include v.flexbox(column, flex-start, center);
+  font-size: 150%;
+  font-family: v.$commissioner;
+
+  h2 {
+    font-family: v.$prosto;
+    color: v.$yellow;
+    text-shadow: 2px 2px black;
+  }
+
+  li {
+    color: black;
+  }
+}
+
+tr {
+  @include v.flexbox(row, space-between, center);
+  width: 45vw;
+}
+
+th {
+  color: v.$yellow;
+}
+
+td {
+  color: v.$light;
+  margin-left: 5%;
+}
+
+.driver-info {
+  background-color: v.$medium;
+  padding: 3% 10%;
+  border: 6px groove v.$teal;
+  border-radius: 10px;
+}
+
+form {
+  @include v.flexbox(column, space-between, center);
+  width: 50vw;
+}
+
+select {
+  font-size: 100%;
+  margin: 3%;
+  padding: 1%;
+  background-color: v.$medium;
+  color: v.$light;
+  border: 6px groove v.$teal;
+  border-radius: 10px;
+
+}
+
+@media screen and (max-width: 775px) {
+  tr {
+    @include v.flexbox(row, space-between, center);
+    width: 75vw;
+  }
+
+  .container {
+    @include v.flexbox(column, flex-start, center);
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .drivers {
+    font-size: 120%
+  }
+}
+

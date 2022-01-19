@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import PropTypes from 'prop-types';
+import "../SCSS/Drivers.scss";
 import useFetch from "../hooks/useFetch";
 import Constructors from "./Constructors";
 import Wins from "./Wins";
@@ -16,7 +17,7 @@ const SingleDriver = () => {
   }   
   
   return (
-    <div>
+    <div className="driver-info">
     {error && <p>{error}</p>}
     {isLoading ? <Loading /> :
     <section>

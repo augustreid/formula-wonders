@@ -25,10 +25,13 @@ const DriverSelect = ({year}) => {
       {error ? <p>{error}</p> :
       <>
       <form>
+      <label>
+        Pick a Formula 1 Driver
       <select className="driver-name" name="driverName" value={selectedDriver} onChange={(e) => {setSelectedDriver(e.target.value) }}>
         <option>--Please Select a Driver--</option>
         {drivers}
       </select>
+      </label>
       </form>
       {selectedDriver && <Link to={`/drivers/${selectedDriver}`} key={selectedDriver.driverId} >
         <button type="submit" className="lookup-driver">Lookup Driver</button>
