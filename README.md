@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Formula Wonders
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Mod3 Showcase
 
-## Available Scripts
+## Table of Contents
+- [Abstract](#Abstract)
+- [Technologies](#Technologies)
+- [Illustrations](#Illustrations)
+- [Install](#Install)
+- [Wins](#Wins)
+- [Challenges](#Challenges)
+- [Additions](#Additions)
+- [Contributors](#Contributors)
 
-In the project directory, you can run:
+## Abstract
+Formula Wonders is an app intended to provide just the most essential information for the casual Formula One fan who is too busy to keep fully up to date or know who won the championship in 1974. 
+The home page provides just three options: Schedule, Race Results, and Drivers. 
+- Clicking the `Schedule` icon will take you to a page that displays the race schedule for the current F1 season. 
+- Clicking the `Results` icon, from Home or from any other page, will display the results from the most recently completed race. 
+- Clicking the `Drivers` icon will take you to a page where you can lookup basic stats for every driver in the history of the sport. 
+    - First select a year from the dropdown.
+    - You will then be prompted to choose a driver from the second dropdown
+    - You can then click the `Lookup Driver` button, and the app will display ino for the selected driver. 
+    - The constructors(teams) that a driver has competed for, are links to the that team's wikipedia page. 
+    - Similarly, the `Learn More` button at the bottom of the driver stats will link you to the driver's wikipedia page. 
+    - At any point, you can click the `Formula Wonders` header to return to the home page.
 
-### `npm start`
+## Technologies
+-  HTML
+-  CSS
+-  SASS
+-  JavaScript
+-  React
+-  React-Router
+-  Hooks
+-  Cypress 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Illustrations
+![Home Page](./src/assets/home.png)
+![Current Season Schedule](./src/assets/schedule.png)
+![Most Recent Race Results](./src/assets/details.png)
+![Select a Year](./src/assets/drivers1.png)
+![Choose a Driver](./src/assets/drivers2.png)
+![Display Driver Details](./src/assets/lando.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Install
 
-### `npm test`
+-  Clone this [repo](https://github.com/elisebeall/dnd-spells) to your machine
+-  cd into the directory `formula-wonders`
+-  Run `npm install`
+-  Run `npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Wins
+- Successfully working with a complex API that offered a massive number of possible endpoints
+- Using Hooks to help manage state
+- Creating the illusion of a multi-page app using Router, including the use of a nested route.
 
-### `npm run build`
+## Challenges
+- Working with asynchronous JS and multiple levels of conditional rendering
+- Extracting the necessary data from API endpoints that were many object levels deep
+- Error handling
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Additions
+### Future Iterations
+- Turn driver names in the race results into links to their driver info page
+- Add additional filtering options for drivers, and a search function.
+- Add photos for drivers.
+- Countdown calendar for the next race.
+- Better format for dates and times, including localized timezones. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Creator
+- [August Reid](https://github.com/augustreid)
