@@ -14,7 +14,7 @@ body {
 .header {
   @include v.flexbox(row, flex-start, center);
   font-family: v.$racing;
-  font-size: 300%;
+  font-size: 4vw;
   color: v.$yellow;
   text-shadow: 1px 1px black;
 }
@@ -28,3 +28,20 @@ h1::first-letter {
   font-size: larger;
 }
 
+@media screen and (max-width: 775px) {
+  .header {
+    font-size: 20pt;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+     @include v.flexbox(column, center, center);
+     font-size: 18pt;
+  }
+
+  h1 {
+    margin: none;
+    padding: none;
+  }
+}

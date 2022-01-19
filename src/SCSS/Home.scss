@@ -20,3 +20,16 @@ a {
     font-family: v.$kite;
     margin: 3%;
   }
+
+@media screen and (max-width: 775px) {
+   .home {
+       @include v.flexbox(column, flex-start, center);
+   }
+
+   img {
+       width: 35vw;
+       height: 35vw;
+       margin: 8%;
+   }
+
+}
