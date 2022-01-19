@@ -1,11 +1,11 @@
 import React from "react";
 import './SCSS/App.scss';
-import Home from "./components/Home";
-import RaceResults from "./components/RaceResults";
-import Schedule from "./components/Schedule"
-import Drivers from "./components/Drivers"
-import SingleDriver from "./components/SingleDriver";
-import NotFound from "./components/NotFound";
+import Home from "./Components/Home";
+import RaceResults from "./Components/RaceResults";
+import Schedule from "./Components/Schedule"
+import Drivers from "./Components/Drivers"
+import SingleDriver from "./Components/SingleDriver";
+import NotFound from "./Components/NotFound";
 import { Routes, Route, Link } from "react-router-dom";
 
 const App = () => {
