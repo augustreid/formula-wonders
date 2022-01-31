@@ -4,13 +4,10 @@ node_js:
 notifications:
   email: false
 
-cache:
-  # install dependencies and check that Cypress can run
   override:
     - npm ci
     - npm run cy:verify
 
 script:
-  # start server in the background
   - npm run start:ci &
   - kill $(jobs -p) || true
