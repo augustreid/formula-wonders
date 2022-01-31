@@ -10,4 +10,5 @@ notifications:
 
 script:
   - npm run start:ci &
+  - npm test
   - kill $(jobs -p) || true
