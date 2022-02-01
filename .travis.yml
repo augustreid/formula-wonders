@@ -3,12 +3,3 @@ node_js:
   - "16"
 notifications:
   email: false
-
-  override:
-    - npm ci
-    - npm run cy:verify
-
-script:
-  - npm run start:ci &
-  - npm run test
-  - kill $(jobs -p) || true
