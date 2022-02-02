@@ -1,7 +1,7 @@
 {
   "name": "formula-wonders",
   "version": "0.1.0",
-  "homepage": "http://augustreid.github.io/formula-wonders",
+  "homepage": "https://augustreid.github.io/formula-wonders/",
   "private": true,
   "engines": {
     "node": "16.x"
