@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/augustreid/formula-wonders/static/css/main.b8e11644.css",
-    "main.js": "/augustreid/formula-wonders/static/js/main.f815001c.js",
-    "static/media/helmet.png": "/augustreid/formula-wonders/static/media/helmet.5a398e3267eab5c1cbc0.png",
-    "static/media/flag.png": "/augustreid/formula-wonders/static/media/flag.36081c05a2c45b2c1ab1.png",
-    "static/media/calendar.svg": "/augustreid/formula-wonders/static/media/calendar.aa78dbefd6d09a55b79bbb5fb2648a7a.svg",
-    "index.html": "/augustreid/formula-wonders/index.html",
-    "main.b8e11644.css.map": "/augustreid/formula-wonders/static/css/main.b8e11644.css.map",
-    "main.f815001c.js.map": "/augustreid/formula-wonders/static/js/main.f815001c.js.map"
+    "main.css": "/formula-wonders/static/css/main.b8e11644.css",
+    "main.js": "/formula-wonders/static/js/main.c6a36d74.js",
+    "static/media/helmet.png": "/formula-wonders/static/media/helmet.5a398e3267eab5c1cbc0.png",
+    "static/media/flag.png": "/formula-wonders/static/media/flag.36081c05a2c45b2c1ab1.png",
+    "static/media/calendar.svg": "/formula-wonders/static/media/calendar.aa78dbefd6d09a55b79bbb5fb2648a7a.svg",
+    "index.html": "/formula-wonders/index.html",
+    "main.b8e11644.css.map": "/formula-wonders/static/css/main.b8e11644.css.map",
+    "main.c6a36d74.js.map": "/formula-wonders/static/js/main.c6a36d74.js.map"
   },
   "entrypoints": [
     "static/css/main.b8e11644.css",
-    "static/js/main.f815001c.js"
+    "static/js/main.c6a36d74.js"
   ]
 }
