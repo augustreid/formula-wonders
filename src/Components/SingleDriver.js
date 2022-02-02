@@ -9,7 +9,7 @@ import Loading from "./Loading";
 
 const SingleDriver = () => {
   const driverId = useParams().id;
-  const {data: driverInfo, isLoading, error} = useFetch(`http://ergast.com/api/f1/drivers/${driverId}.json`)
+  const {data: driverInfo, isLoading, error} = useFetch(`https://ergast.com/api/f1/drivers/${driverId}.json`)
   let driver;
 
   if (!isLoading) {

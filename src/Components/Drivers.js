@@ -9,7 +9,7 @@ import SideNav from "./SideNav";
 
 
 const Drivers = () => {
-  const {data: allSeasons, isLoading, error} = useFetch("http://ergast.com/api/f1/seasons.json?limit=100")
+  const {data: allSeasons, isLoading, error} = useFetch("https://ergast.com/api/f1/seasons.json?limit=100")
   const [raceSeason, setRaceSeason] = useState("")
   let seasons;
 

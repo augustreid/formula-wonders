@@ -7,7 +7,7 @@ import Loading from "./Loading";
 import SideNav from "./SideNav";
 
 const RaceResults = () => {
-  const {data, isLoading, error} = useFetch("http://ergast.com/api/f1/current/last/results.JSON")
+  const {data, isLoading, error} = useFetch("https://ergast.com/api/f1/current/last/results.JSON")
   let results;
   
   if(!isLoading) {

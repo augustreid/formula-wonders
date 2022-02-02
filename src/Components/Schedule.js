@@ -8,7 +8,7 @@ import SideNav from "./SideNav";
 
 
 const Schedule = () => {
-  const {data, isLoading, error} = useFetch("http://ergast.com/api/f1/2022.json");
+  const {data, isLoading, error} = useFetch("https://ergast.com/api/f1/2022.json");
   let races;
 
   if (!isLoading) {
