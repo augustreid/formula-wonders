@@ -1,6 +1,6 @@
 # Formula Wonders
 
-[View Deployed App]()
+[View Deployed App](https://augustreid.github.io/formula-wonders)
 
 ### Mod3 Showcase
 
@@ -47,7 +47,7 @@ The home page provides just three options: Schedule, Race Results, and Drivers.
 
 ## Install
 
--  Clone this [repo](https://github.com/elisebeall/dnd-spells) to your machine
+-  Clone this [repo](https://github.com/augustreid/formula-wonders) to your machine
 -  cd into the directory `formula-wonders`
 -  Run `npm install`
 -  Run `npm start`
