@@ -2,7 +2,7 @@
 describe("Formula Wonders home page", () => {
   
   beforeEach(() => {
-    cy.visit('http://localhost:3000');
+    cy.visit('http://localhost:3000/formula-wonders');
   });
 
   it("should be able to visit the home page and render the correct elements", () => {  
@@ -43,7 +43,7 @@ describe("Formula Wonders home page", () => {
   })
 
   it("should display a 404 error if the user tries an undefined route", () => {
-    cy.visit("http://localhost:3000/whoops")
+    cy.visit("http://localhost:3000/formula-wonders/whoops")
     
     cy.get("h2")
         .should("contain", "404 Page Not Found")
@@ -51,16 +51,4 @@ describe("Formula Wonders home page", () => {
         .contains("Back to the Pit Lane")
         .click()
   })
-
-  //  it("should display an error if there is a server issue", () => {      
-  //     cy.intercept("http://ergast.com/api/f1/current/last/results.JSON", {
-  //     method: "GET",
-  //     status: 500,
-  //     ok: false,
-  //     body: {}
-  //   })
-  //     cy.visit("http://localhost:3000/race-results")
-  //       // .get("p")
-  //       // .should("contain", "Sorry, something went wrong! Please try again.")
-  // })
 })

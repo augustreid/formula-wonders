@@ -54,7 +54,7 @@ describe("current season schedule page", () => {
                 }
            }
       })
-   cy.visit("http://localhost:3000/schedule/")
+   cy.visit("http://localhost:3000/formula-wonders/schedule/")
   });
 
   it("should visit the schedule page and render the correct elements", () => {

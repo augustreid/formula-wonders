@@ -24,7 +24,7 @@ describe("driver info page", () => {
         }
     })
 
-    cy.visit("http://localhost:3000/drivers")
+    cy.visit("http://localhost:3000/formula-wonders/drivers")
   })
 
 
@@ -88,7 +88,7 @@ describe("driver info page", () => {
   })
 
   it("should be able to display the specific driver's info based on the url", () => {
-      cy.visit("http://localhost:3000/drivers/bottas")
+      cy.visit("http://localhost:3000/formula-wonders/drivers/bottas")
         .get("h3")
           .should("contain", "Valtteri Bottas")
         .get("ul")

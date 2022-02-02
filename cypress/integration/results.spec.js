@@ -117,7 +117,7 @@ describe("latest race results page", () => {
     }
   }
 })
-   cy.visit("http://localhost:3000/race-results/")
+   cy.visit("http://localhost:3000/formula-wonders/race-results/")
   });
 
   it("should visit the race results page and render the correct elements", () => {
