@@ -1,6 +1,7 @@
 {
   "name": "formula-wonders",
   "version": "0.1.0",
+  "homepage": "http://augustreid.github.io/formula-wonders",
   "private": true,
   "engines": {
     "node": "16.x"
@@ -10,7 +11,6 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "cypress": "^9.2.1",
-    "gh-pages": "^3.2.3",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -21,12 +21,14 @@
     "web-vitals": "^2.1.3"
   },
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "eject": "react-scripts eject",
-  "cypress": "cypress open",
-  "cy:run": "cypress run",
-  "test": "start-server-and-test start http://localhost:3000/ cy:run"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "cypress": "cypress open",
+    "cy:run": "cypress run",
+    "test": "start-server-and-test start http://localhost:3000/ cy:run",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +49,8 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "mini-css-extract-plugin": "2.4.5",
     "start-server-and-test": "^1.14.0"
   }
 }
